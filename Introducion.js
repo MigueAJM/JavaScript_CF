@@ -19,3 +19,11 @@ Math.PI;
 Math.pow(10, 2);
 Math.round(6.5);
 Math.sqrt(4); // https://www.w3schools.com/js/js_math.asp
+
+// Booleanos
+let notificacionesactivas = true;
+let recibirCorreos = false;
+
+let booleano = new Boolean(1);
+console.log(booleano.toString());
+// valores booleanos -- undefined, NaN, null, 0 , .0, "", false
