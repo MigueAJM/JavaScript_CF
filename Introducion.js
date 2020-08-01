@@ -38,3 +38,6 @@ edad < 24;
 edad <= 24
 edad >= 24;
 edad === 24 // compara tambien el tipo de dato === "24" dara false
+
+//Operadores lógicos
+&&  ||  !true !false !(24 == 24)
