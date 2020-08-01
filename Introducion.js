@@ -65,3 +65,25 @@ if (calificacion == 10) {
 }else{
   console.log("Regular");
 }
+
+//ciclos
+// ciclo for, primero una instrucion  donde iniciara el ciclo,segunda instrucion definimos donde terminara el ciclo, instruccion que se ejecuta despues de cada iteraciòn(repeticiòn)
+for (let i = 1; i < 10; i++) {
+  //if (i >= 5) break; //break termina el ciclo
+  if (i % 2 == 0) continue; //solo imprime los impares//continue terminar la iteraciòn altual para que pase a la siguiente
+  console.log(i);
+}
+//ciclo while
+//while (promt()) {
+  //console.log("Presiona cancelar para terminar el ciclo");
+//}
+let i = 1;
+while (i <= 10) {
+  i++;
+  console.log(i);
+}//ciclo imprime hasta el 11
+// do while Nos asegura que almenos una vez se ejecutara nuestro bloque de codigo
+do {
+  i++;
+  console.log(i);
+} while (i <= 10);
