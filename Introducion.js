@@ -1,8 +1,10 @@
 /*
   Introducción
 */
+//Imprimir datos en consola
+console.log("Hola mundo");
 //  Recibir datos
-promt();
+prompt();
 /*
     Como es JavaScript
     Tecnicamente
