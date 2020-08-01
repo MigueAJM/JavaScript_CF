@@ -41,3 +41,25 @@ edad === 24 // compara tambien el tipo de dato === "24" dara false
 
 //Operadores lógicos
 &&  ||  !true !false !(24 == 24)
+
+//Condiciones
+if (5 == 5 && 10 > 2) console.log("Condiciòn exitosa"); //si solo es una instrucciòn no es necesario el uso de llaves
+if (5 == 5 && 10 > 2){ //Para un par de instruciones es necesario usar llevar en nuestro bloque de codigo
+  console.log("Condiciòn exitosa");
+  console.log("Condiciòn exitosa");
+}
+let edad = 18; // condiciòn else nos sirve para cuando nuestra condicion no se cumple y entonces ejecuta el  bloque de codigo de else {
+}
+if (edad > 18){
+  console.log("Eres meyor de edad");
+}else{
+  console.log("Eres menor de edad");
+}
+let calificacion = 9; //Condiciòn elseif
+if (calificacion == 10) {
+  console.log("Excelente")
+}else if (calificacion > 8) {
+  console.log("Muy bien");
+}else{
+  console.log("Regular");
+}
