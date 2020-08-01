@@ -27,3 +27,14 @@ let recibirCorreos = false;
 let booleano = new Boolean(1);
 console.log(booleano.toString());
 // valores booleanos -- undefined, NaN, null, 0 , .0, "", false
+
+//Operadores de comparación
+let edad =24;
+edad == 24; // ignora el tipo de dato == "24" dara true
+edad != 24;
+edad !== "24" // igul con un signo mas compara el tipo de dato
+edad > 24;
+edad < 24;
+edad <= 24
+edad >= 24;
+edad === 24 // compara tambien el tipo de dato === "24" dara false
