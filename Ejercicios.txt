@@ -1,0 +1,11 @@
+
+
+Los siguientes, son una serie de ejercicios para que practiques los conocimientos adquiridos después del bloque de conceptos básicos.
+
+    Tomando como entrada un número entero, imprimir si es par o impar.
+
+    Recibir dos números usando prompt y sumarlos, restarlos, dividirlos y multiplicarlos
+
+    Imprimir la sucesión fibonacci el número de veces que indicó el usuario
+
+    Programar el juego del "Número Mágico" en el que se define un número y el usuario trata de adivinarlo, si el número que ingresó el usuario es menor, imprimir la pista "El número mágico es mayor", si el número que ingresó el usuario es mayor, imprimir la pista "El número mágico es menor",
