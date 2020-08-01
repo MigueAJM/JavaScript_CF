@@ -87,3 +87,19 @@ do {
   i++;
   console.log(i);
 } while (i <= 10);
+
+// undefined, Nan, null
+//undefined;indica que a una variable no se le ha asignado un valor o no se a declarado (tipo de dato)
+abasd
+typeof abas; //typeof retorna el tipo de dato
+let numero;
+numero;
+typeof numero; // "undefined"
+// null objeto especial en js que indica la ausencia de valor
+numero = null;
+numero;
+typeof numero; // "object"
+null == undefined; //(true)
+null === undefined; //(false)
+//NaN not a number
+"hola" * 3;//retorna un NaN
