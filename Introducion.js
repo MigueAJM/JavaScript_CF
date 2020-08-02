@@ -201,3 +201,9 @@ let executor = {
 }
 usuario.nombreCompleto();
 executor.execute(usuario.nombreCompleto);
+
+//Arrow functions
+
+let demo = ()=>{
+  console.log("Hola mundo");
+}
