@@ -160,3 +160,17 @@ functon sumaTodos(){
   return arguments[0] + arguments[1];
 }
 console.log(1, 2);
+
+//Funciones anonimas
+function executor(function){
+  function();
+}
+
+function decirHola(){
+  console.log("Hola");
+}
+executor(decirHola);
+
+executor(function(){
+  console.log("Hola"); //Function anonima
+});
