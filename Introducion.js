@@ -103,3 +103,20 @@ null == undefined; //(true)
 null === undefined; //(false)
 //NaN not a number
 "hola" * 3;//retorna un NaN
+
+/*
+  Funciones
+*/
+// Declaracion de Funciones
+function saluda(){
+  //code
+  console.log("Hola mundo");
+}
+saluda();
+
+function cuadrado(numero){
+  return numero * numero; //con return nos retorna una respuesta
+}
+function(){ //función anonima
+  //code
+}
