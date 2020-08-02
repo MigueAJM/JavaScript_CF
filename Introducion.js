@@ -149,3 +149,14 @@ function mayor_edad(edad){ //var tiene alance  dentro del bloque de la función 
 }
 mayor_edad();
  // Let y const tienen alcance solo dentro del bloque ms cercano
+
+//agurmentos a Funciones
+function cuadrado(numero){ // parametro variable que colocamos en la function
+  return  numero * numero;
+}
+cuadrado(2); // el valor que recibe es el argumento
+
+functon sumaTodos(){
+  return arguments[0] + arguments[1];
+}
+console.log(1, 2);
