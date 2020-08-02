@@ -120,3 +120,20 @@ function cuadrado(numero){
 function(){ //función anonima
   //code
 }
+
+// Que es el scope (alcance)
+//colección de variables, funciones y objeto.
+/*
+  global Scope
+  Principio "Menor Acceso"
+
+  Local scope
+*/
+let nombre = "Miguel";
+//global scope
+function decir_hola(){
+  // local scope
+  console.log("Hola" + nombre);
+}
+
+decir_hola();
