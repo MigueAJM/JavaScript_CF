@@ -137,3 +137,15 @@ function decir_hola(){
 }
 
 decir_hola();
+
+//Cuando usar let, const y var
+function mayor_edad(edad){ //var tiene alance  dentro del bloque de la función mas cercana
+  if(edad >= 18){
+    var resultado = "Eres mayor de edad";
+  }else{
+    var resultado = "Eres menor de edad";
+  }
+  console.log(resultado);
+}
+mayor_edad();
+ // Let y const tienen alcance solo dentro del bloque ms cercano
