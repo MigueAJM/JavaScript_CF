@@ -174,3 +174,30 @@ executor(decirHola);
 executor(function(){
   console.log("Hola"); //Function anonima
 });
+
+//El contexto
+let objecto = {
+  demo: function(){
+    console.log(this);
+  }
+}
+objeto.demo();
+
+let usuario = {
+  nombre: "Miguel",
+  apellido: "Jimenez",
+  nombreCompleto: function(){
+    console.log(this.nombre + ' ' + this.apellido);
+  }
+}
+
+let executor = {
+  function: null,
+  execute: function(){
+    f();
+    this.function = f;
+    this.function();
+  }
+}
+usuario.nombreCompleto();
+executor.execute(usuario.nombreCompleto);
