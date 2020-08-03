@@ -295,3 +295,26 @@ for(i = 0, i < numeros.length; i++){
   console.log(numeros[i];
   let elemento = numeros[i];
 }
+
+//MEtodos y operaciones sobre arreglos
+let arreglo = ['ruby', 'python' 'java', 'javaScript'];
+//forEach(
+arreglo.forEach(function(elemento) {
+  console.log(elemento);
+});
+//eliminar ruby con filter genera un arreglo sin el elemento o elementos deseados
+arreglo = arreglo.filter(function(el){
+  return el != 'ruby';
+});
+arreglo = arreglo.filter((el)=> el != 'ruby');
+//find Buscar elementos dentro del arreglo
+let elemento_encontrado = arreglo.find(el => el == 'JavaScript');
+console.log(el);
+// map generar un nuevo arreglo con una operación definida
+let numeros = [2,35,6,20];
+let cuadrados = numeros.map(numero => numero * numero);
+console.log(cuadrados);
+//arreglo con cadenas convertidos a numeros
+let numeros = ["2","35","6","20"];
+let cuadrados = numeros.map(numero => parseInt(numero));
+console.log(cuadrados);
