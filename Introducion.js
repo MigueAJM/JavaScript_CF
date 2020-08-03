@@ -175,7 +175,7 @@ executor(function(){
   console.log("Hola"); //Function anonima
 });
 
-//El contexto
+//El contexto this
 let objecto = {
   demo: function(){
     console.log(this);
@@ -207,3 +207,29 @@ executor.execute(usuario.nombreCompleto);
 let demo = ()=>{
   console.log("Hola mundo");
 }
+
+//arrow functions y el contexto
+let tutor = {
+  nombre: "Miguel",
+  apellido: "JM"
+  nombreCompleto: function(){
+    setTimeout(function(){ // nos retorna nombre y apellido como undefined
+      console.log(this.nombre + " " + this.apellido);
+    }, 1000);
+}
+tutor.nombreCompleto();
+
+let tutor = {
+  nombre: "Miguel",
+  apellido: "JM"
+  nombreCompleto: function(){
+    setTimeout(()=>{ //Nos retorna el valor deseado "Miguel JM"
+      console.log(this.nombre + " " + this.apellido);
+    }, 1000);
+}
+tutor.nombreCompleto();
+/*
+  Cada vez que se envie una funcion como argumento de otra función y quieras conservar el valor de this
+  utiliza siempre la sintaxis de arrow functions ()=>{}
+  no solocionan todos los problemas del contexto
+*/
