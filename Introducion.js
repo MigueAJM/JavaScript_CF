@@ -233,3 +233,54 @@ tutor.nombreCompleto();
   utiliza siempre la sintaxis de arrow functions ()=>{}
   no solocionan todos los problemas del contexto
 */
+
+//CALL APPLY y BIND
+//ejecutan la funcion de forma inmediata (call and apply)
+function executor(function){
+  function();
+}
+let tutor = {
+  nombre: "Miguel",
+  apellido: "JM"
+  nombreCompleto: function(){
+    console.log(this.nombre + " " + this.apellido);
+  }
+}
+executor(tutor.nombreCompleto); // nos retorna undefined
+// para evitar este problema usamos call
+function executor(function){
+  function.call(tutor); //tutor pasa como el contexto this
+}
+let tutor = {
+  nombre: "Miguel",
+  apellido: "JM"
+  nombreCompleto: function(){
+    console.log(this.nombre + " " + this.apellido);
+  }
+}
+executor(tutor.nombreCompleto); // retorna Miguel JM
+
+function saluda(nombre){
+  console.log("hola " + nombre);
+}
+
+saluda.call(window, "Miguel");
+// con apply los argumentos se enlistan en arreglos
+function saluda(nombre){
+  console.log("hola " + nombre);
+}
+
+saluda.apply(window, ["Miguel"]);
+
+//Bind nos permite asignar el valor del contexto, pero no manda a llamar la function
+function executor(function){
+  function();
+}
+let tutor = {
+  nombre: "Miguel",
+  apellido: "JM"
+  nombreCompleto: function(){
+    console.log(this.nombre + " " + this.apellido);
+  }
+}
+executor(tutor.nombreCompleto.bind(tutor)); // con bind especificacamos quien sera this de este argumento
