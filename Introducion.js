@@ -284,3 +284,14 @@ let tutor = {
   }
 }
 executor(tutor.nombreCompleto.bind(tutor)); // con bind especificacamos quien sera this de este argumento
+
+/*
+    Arreglos
+*/
+//Arreglos y sus usos
+//Recorrer un arreglo
+let numeros = [1,23,12,14,5];
+for(i = 0, i < numeros.length; i++){
+  console.log(numeros[i];
+  let elemento = numeros[i];
+}
