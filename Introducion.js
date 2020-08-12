@@ -318,3 +318,49 @@ console.log(cuadrados);
 let numeros = ["2","35","6","20"];
 let cuadrados = numeros.map(numero => parseInt(numero));
 console.log(cuadrados);
+
+/*
+* Objetos
+*/
+
+//Declarar un objecto JSON
+let curso = {
+  title: "Curso profesional de javascript",
+  duración: 2.2,
+  bloque: ["Introducción", "Funciones"],
+  inscribir: function(usuario){
+    console.log(usuario + "Ahora estas inscrito")
+  }
+}
+console.log(curso.title);
+console.log(curso['title']);
+
+console.titulo = "Curso base de JavaScript";
+console.log(curso.inscribir("Miguel"));
+
+curso['inscribir'] = function(){};
+
+//Funciones constructoras... Para funciones constructores se recomienda usar mayuscula al iniciar su nombreCompleto
+function Curso(){
+  this.titulo = "Curso de JavaScript"; // con this definimos la propiedad titulo
+
+  this.inscribir = function(usuario){ // definimos un metodo
+    console.log(usuario + "se ha inscrito");
+  }
+}
+// Generar objecto
+let cursoJavaScript = new Curso();
+cursoJavaScript.inscribir("Miguel");
+
+function Curso(title){
+  this.titulo = title; // con this definimos la propiedad titulo
+
+  this.inscribir = function(usuario){ // definimos un metodo
+    console.log(usuario + "se ha inscrito");
+  }
+}
+// Generar objecto
+let cursoJavaScript = new Curso("Curso profesional de JavaScript");
+cursoJavaScript.inscribir("Miguel");
+
+//Clases
