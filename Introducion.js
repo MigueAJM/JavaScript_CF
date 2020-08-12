@@ -388,3 +388,45 @@ class Curso{
     this.color = color
   }
 }
+
+//Herencia
+class Player{
+  play(){ this.video.play(); }
+  duracion(){ return this.video.duracion / 100; }
+}
+class Vimeo extends Player{
+  //play(){ this.video.play(); }
+  //duracion(){ return this.video.duracion / 100; }
+  open(){ this.redirectToVimeo(this.video); }
+}
+
+class YouTube extends Player{
+  //play(){ this.video.play(); }
+  //duracion(){ return this.video.duracion / 100; }
+  open(){ this.redirectToYouTube(this.video); }
+}
+function User(){
+  constructor(nombre){
+    this.nombre = usuario;
+  }
+  saludar(){
+    console.log("Hola" + this.nombre);
+  }
+}
+
+class Admin extends User{
+  constructor(nombre){
+    super(nombre); // se respeta el codigo de la herencia
+  }
+  saludar(){
+    //console.log("Hola usuario")
+    super.saludar();
+    console.log("Aqui esta el panel de administración");
+  }
+}
+
+let admin = new Admin("Miguel");
+
+admin.saludar();
+class CustomDate extends Date{}
+class Coleccion extends Array{}
