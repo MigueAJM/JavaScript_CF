@@ -363,4 +363,18 @@ function Curso(title){
 let cursoJavaScript = new Curso("Curso profesional de JavaScript");
 cursoJavaScript.inscribir("Miguel");
 
-//Clases
+//Clases      en javaScript no existen las clases, ed un lenguaje orientado a prototipos
+//con las actualizaciones de javascript se introdujieron las clases, solo es una sintaxis alternativa para los Objetos
+class Curso{
+  //propiedades y metodos
+  constructor(titulo){
+    this.titulo = titulo;
+  }
+  inscribir(usuario){
+    console.log(usuario + "se ha registrado");
+  }
+}
+let curso = class{} //class expression
+
+let javaScriptCurso = new Curso("Curso Profesional deJavaScript");
+console.log(javaScriptCurso.titulo);
