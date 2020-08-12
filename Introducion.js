@@ -378,3 +378,13 @@ let curso = class{} //class expression
 
 let javaScriptCurso = new Curso("Curso Profesional deJavaScript");
 console.log(javaScriptCurso.titulo);
+
+//Constructor
+class Curso{
+  //se ejecuta el constructor de manera automatica cun¿ando se hace un instancia
+  constructor(titulo, duracion, color){ //una clase javascript solo puede tener un constructor
+    this.titulo = titulo;
+    this.duracion = duracion;
+    this.color = color
+  }
+}
