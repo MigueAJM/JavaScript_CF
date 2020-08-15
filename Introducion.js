@@ -457,5 +457,9 @@ class Usuario{
     return user;
   }
 }
+let administrador = Usuario.createAdmin();
 
-let administrador = Usuario.createAdmin(); 
+//Prototipos =>
+// __proto__  los objetos se creaen en base a otros objetos
+let user = {nombre: "Miguel"};
+user.__proto__;
