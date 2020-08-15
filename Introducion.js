@@ -448,3 +448,14 @@ let user = new Usuario("miguel");
 user.name = "angel"
 console.log(user.name);
 // Una propiedad no puede compartir el mismo nombre que los getter y setter
+
+// Metodos estáticos => no necesitan de una instancia
+class Usuario{
+  constructor(permisos="lectura"){ this.permisos = permisos; }
+  static createAdmin(){
+    let user = new Usuario("administrador");
+    return user;
+  }
+}
+
+let administrador = Usuario.createAdmin(); 
