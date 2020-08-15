@@ -430,3 +430,32 @@ let admin = new Admin("Miguel");
 admin.saludar();
 class CustomDate extends Date{}
 class Coleccion extends Array{}
+
+//Metodos accesores =>Se utilizan para modifir una propiedad o mostrarla
+ //se dividen en dos getter: leer propiedades y setter: modifficar propiedades
+class Usuario{
+  constructor(nombre){ this._name = nombe; }
+
+  get name(){
+    return this.name.chartAt(0).toUpperCase() + this._name.slice(1); // miguel => Miguel
+  }
+
+  set name(nombre){
+    this._name = nombre;
+  }
+}
+let user = new Usuario("miguel");
+user.name = "angel"
+console.log(user.name);
+// Una propiedad no puede compartir el mismo nombre que los getter y setter
+
+// Metodos estáticos => no necesitan de una instancia
+class Usuario{
+  constructor(permisos="lectura"){ this.permisos = permisos; }
+  static createAdmin(){
+    let user = new Usuario("administrador");
+    return user;
+  }
+}
+
+let administrador = Usuario.createAdmin(); 
