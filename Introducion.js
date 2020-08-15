@@ -457,5 +457,41 @@ class Usuario{
     return user;
   }
 }
+let administrador = Usuario.createAdmin();
 
-let administrador = Usuario.createAdmin(); 
+//Prototipos =>
+// __proto__  los objetos se creaen en base a otros objetos
+let user = {nombre: "Miguel"};
+user.__proto__;
+
+//Herencia de prototipos
+let animal = Object.create(null);
+animal.vivo = true;
+animal.estaVivo = function(){if(this.vivo) console.log("Sigue vivo");}
+let perro = Object.create(animal); //objeto como prototipo
+perro.estaVivo(); // Hereda el metodo estavivo del objeto animal
+//cadena de prototipos, termina cuando encuentra un objeto con el prototipo nulo
+console.log(perro.edad);
+
+//La propiedad del prototype => __proto__
+function User(){}
+let user = new User();
+console.log(user.__proto__);
+console.log(User.prototype);
+User.prototype.saludar =function(){
+  console.log("Hola");
+}
+user.saludar();
+
+let Miguel = Object.create(user);
+Miguel.saludar();
+
+//
+function User(){
+  User.prototype.saludar =function(){
+    console.log("Hola");
+}
+function Admin(){}
+Admin.prototype = new User();
+let miguel = new Admin();
+miguel.saludar();
