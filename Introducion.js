@@ -463,3 +463,12 @@ let administrador = Usuario.createAdmin();
 // __proto__  los objetos se creaen en base a otros objetos
 let user = {nombre: "Miguel"};
 user.__proto__;
+
+//Herencia de prototipos
+let animal = Object.create(null);
+animal.vivo = true;
+animal.estaVivo = function(){if(this.vivo) console.log("Sigue vivo");}
+let perro = Object.create(animal); //objeto como prototipo
+perro.estaVivo(); // Hereda el metodo estavivo del objeto animal
+//cadena de prototipos, termina cuando encuentra un objeto con el prototipo nulo
+console.log(perro.edad);
