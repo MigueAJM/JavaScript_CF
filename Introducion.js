@@ -495,3 +495,8 @@ function Admin(){}
 Admin.prototype = new User();
 let miguel = new Admin();
 miguel.saludar();
+
+/*
+* Programacion asincrona
+* Event Loop => Ciclo de eventos
+*/
