@@ -500,3 +500,41 @@ miguel.saludar();
 * Programacion asincrona
 * Event Loop => Ciclo de eventos
 */
+
+
+/*
+* Bunus Point
+*/
+
+//  Spread Operator => permite expandir un arreglo o un objeto
+// como podriar llenar los 3 argumentos con mi arreglo sin sacar los elementos de l arreglo
+// Solución no valida => sumar(numeros[0], numeros[1], numeros[2]);
+let numeros = [2, 3, 5];
+
+function sumar(n1, n2, n3){
+  return n1 + n2 +n3;
+}
+
+let resultado = sumar.apply(this, numeros);
+let resultado = sumar(...numeros); // hace lo mismo que lo anterior
+console.log(resultado);
+
+let otro_arreglo = ['hola', 'mundo'];
+console.log(...numeros, ...otro_arreglo);
+
+let objeto = {
+  clave: 3;
+}
+
+let objetoDos = {
+  otraclave:4;
+}
+
+console.log(objeto);
+console.log(objetoDos);
+
+let newObject = {
+  ...objeto,
+  ...objetoDos
+}
+console.log(newObject);
