@@ -538,3 +538,29 @@ let newObject = {
   ...objetoDos
 }
 console.log(newObject);
+
+
+//  For of y For in => ciclos
+//  For of => en cada iteración nos entrega un elemento del iterrable, no se cuenta con un index para la posición de los elemntos
+// For in => itera sobre las propiedades, en lugar de los valores nos retorna las propiedades iterables, "SOLO LAS ITERABLES"
+let arreglo = [2, 3, 5];
+
+for (numero of arreglo){
+  console.log(numero);
+}
+function saludaATodos(){
+  for(nombre of arguments){
+    console.log("Hola" + nombre);
+  }
+}
+
+saludaATodos('Miguel', 'Codi', ' b');
+
+let usuario = {
+  nombre: 'Miguel',
+  edad: '23'
+}
+
+for(propiedad in usuario){
+  console.log(propiedad);
+}
