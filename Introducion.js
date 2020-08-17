@@ -610,3 +610,13 @@ async function showGitHubInfo(){
   console.log(repositorio);
 }
 showGitHubInfo();
+
+
+//  Manejar errores en promesas
+(async function(){
+  try{
+    let promesa = await Promise.reject("Error");
+  } catch(error){
+    console.log(error);
+  }
+});
