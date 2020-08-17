@@ -620,3 +620,9 @@ showGitHubInfo();
     console.log(error);
   }
 });
+
+/*
+* Modulos
+* son archivos que nos permiten compartir elementos 
+* de codigos con otros mudulos
+*/
