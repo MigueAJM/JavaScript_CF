@@ -564,3 +564,20 @@ let usuario = {
 for(propiedad in usuario){
   console.log(propiedad);
 }
+
+/*
+* Async
+* Await
+*/
+
+//  Async => Siempre retornan una promesa, sin importar el cuerpo del codigo de la función
+
+async function suma(valor1, valor2){
+  //return Promise.resolve(valor1 + valor2); esto es lo que hace internamente
+  return valor1 +valor2;
+}
+async function calcular(){
+  return new Promise((resolve, reject)=>{
+    settimeout(resolve, 400, 5);
+  });
+}
