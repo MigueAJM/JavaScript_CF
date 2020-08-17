@@ -581,3 +581,32 @@ async function calcular(){
     settimeout(resolve, 400, 5);
   });
 }
+
+// Await => hace que la ejecución del codigo espere a que una promesa sea resuelta
+let promesa = new Promise((resolve, reject)=>{
+  setTimeout(resolve, 500, 5);
+});
+
+promesa.then((resultado)=>{ //then se usa para poder manejar el resultado de la promesa
+  console.log(resultado);
+});
+
+//con await es mas claro y legible, solo se usa dentro de una funcción asincrona
+(async function(){
+  let promesa = new Promise((resolve, reject)=>{
+    setTimeout(resolve, 500, 5);
+  });
+  console.log(promesa);
+});
+
+async function showGitHubInfo(){
+  let response = await fetch('https://api.github.com/users/MiGueAJM9724/repos');
+  let repositorio = await response.json();
+
+  //mismo ejemplo con promesas
+  fetch('https://api.github.com/users/MiGueAJM9724/repos').then(r => r.json()).then(()=>{
+    console.log(repos);
+  });
+  console.log(repositorio);
+}
+showGitHubInfo();
