@@ -22,6 +22,31 @@ while(!item.done){
   item = iterador.next();
 }
 
+
+// Generadores => sintaxis mas clara y consiza
+function* counter(){
+  console.log("Estoy aqui");
+  yield 1;
+  console.log("Ahora estoy aqui");
+  yield 2;
+}
+let generador = counter();
+console.log(generador.next());
+console.log(generador.next());
+
+function* counter(){
+  for(var i = 1; i<=5; i++){
+    yield i;
+  }
+}
+let generador = counter();
+console.log(generador.next());
+console.log(generador.next());
+console.log(generador.next());
+console.log(generador.next());
+console.log(generador.next());
+
+
 //Return en funciones generadoras
 // yield es muy parecido a return
 function* returnador(){
