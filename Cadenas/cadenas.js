@@ -8,3 +8,8 @@ console.log(typeof nombre);
 console.log(typeof name);
 
 //    ----  Cuarsión de tipos ----
+
+
+// caracteres especiales
+// escaping => identificación de caracteres especiales
+console.log("Migue dijo: \"Hola\"");
