@@ -49,11 +49,11 @@ console.log(generador.next());
 
 //Return en funciones generadoras
 // yield es muy parecido a return
-function* returnador(){
+function* retornador(){
   return 3;
 }
 
-let g = returnador();
+let g = retornador();
 console.log(g.next());
 
 function* counter(){
@@ -65,3 +65,24 @@ let generador = counter();
 console.log(generador.next());
 console.log(generador.next());
 console.log(generador.next());
+
+//Delegar Generadores
+function* counter(){
+  for(var i = 1; i<=5; i++){
+    yield i;
+  }
+}
+let generador = counter();
+
+function* retornador(){
+  yield* counter ;
+  console.log("Regrese");
+}
+
+let g = retornador();
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
