@@ -35,3 +35,21 @@ let nuevoTexto = texto.replace(/(\d)(\d{3})/g, function(match,g1,g2,offset,caden
   return g1 + "," + g2;
 });
 console.log(nuevoTexto);
+
+// Rangos en regex
+
+console.log("abcd".match(/[abcd]/)); // ["a"]
+console.log("abcd".match(/abcd/));  //  ["abcd"]
+console.log("b".match(/[abcd]/)); //  ["b"]
+console.log("b".match(/abcd/)); //  null
+console-log("a".match(/a|b/));
+
+let texto = "Hola";
+texto.match(/H[ol]a/); // null
+// /abcd/ | /a-d/
+
+/*
+* \d es igual al rango [0-9] es decir, cualquier digito,
+* \w es igual al rango [a-zA-Z0-9], y represente cualquier digito, o cualquier letra o guiones bajos
+*   developer.mozilla.org  => Character class
+*/
