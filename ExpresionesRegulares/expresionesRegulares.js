@@ -53,3 +53,10 @@ texto.match(/H[ol]a/); // null
 * \w es igual al rango [a-zA-Z0-9], y represente cualquier digito, o cualquier letra o guiones bajos
 *   developer.mozilla.org  => Character class
 */
+
+// Agrupamiento => Recordar parte de un patron por separado  y aplicar cuantificaciones aun grupo
+/\d*/ // cualquier cantidad de digitos empezando de 0
+console.log("123--3-2-".match(/(\d-)+/g)); // +  uno o mas caracteres
+
+console.log("texto@dominio".match(/(\S+)@\S+/));
+console.log("texto@dominio".match(/(?<username>\S+)@\S+/)); //para darle un nombre al grupo, en la propiedad grups aparecera
