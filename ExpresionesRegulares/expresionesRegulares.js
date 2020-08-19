@@ -19,3 +19,19 @@ let it = texto.matchAll(/\d/g);
 for(instancia of it){
   console.log(instancia);
 }
+
+//Remplazando patrones
+let texto = "codigofacilito es una escuela de programación, codigofacilito es genial";
+let nuevoTexto = texto.replace(/codigofacilito/g, "CodigoFacilito"); // sin la bandera g solo se remplazara en la primara instancia
+console.log(nuevoTexto);
+
+let texto = "1000 numeros disponibles 4000";
+let nuevoTexto = texto.replace(/(\d)(\d{3})/g, "$1, $2");
+console.log(nuevoTexto);
+
+let texto = "1000 numeros disponibles 4000";
+let nuevoTexto = texto.replace(/(\d)(\d{3})/g, function(match,g1,g2,offset,cadena){
+  console.log(match,g1,g2,offset,cadena);
+  return g1 + "," + g2;
+});
+console.log(nuevoTexto);
