@@ -60,3 +60,11 @@ console.log("123--3-2-".match(/(\d-)+/g)); // +  uno o mas caracteres
 
 console.log("texto@dominio".match(/(\S+)@\S+/));
 console.log("texto@dominio".match(/(?<username>\S+)@\S+/)); //para darle un nombre al grupo, en la propiedad grups aparecera
+
+
+//  Cuantificadores => https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+
+console.log("http://www".match(/https?:/{2}w{3}/));
+
+console.log("<p>Hola mundo</p>".match(/<.+>/)); // los cuantificadores son codiciosos nos retornara ["<p>Hola mundo</p>"]
+console.log("<p>Hola mundo</p>".match(/<.+?>/));// sera modo lazy y solo nos retornara [<p>]
